@@ -9,7 +9,12 @@ import {
     MatCheckboxModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatTabsModule,
+    MatCardModule,
+    MatSelectModule,
+    MatProgressBarModule,
+    MatDialogModule
 } from '@angular/material';
 
 
@@ -23,7 +28,12 @@ import {
          MatCheckboxModule,
          MatSidenavModule,
          MatToolbarModule,
-         MatListModule
+         MatListModule,
+         MatTabsModule,
+         MatCardModule,
+         MatSelectModule,
+         MatProgressBarModule,
+         MatDialogModule
         ],
 
     exports: [MatButtonModule, 
@@ -35,7 +45,12 @@ import {
         MatCheckboxModule,
         MatSidenavModule,
         MatToolbarModule,
-        MatListModule
+        MatListModule,
+        MatTabsModule,
+        MatCardModule,
+        MatSelectModule,
+        MatProgressBarModule,
+        MatDialogModule
     ]
 })
 

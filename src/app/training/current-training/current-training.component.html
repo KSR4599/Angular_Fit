@@ -1,3 +1,7 @@
-<p>
-  current-training works!
-</p>
+
+<section class="current-training" fxLayout="column" fxLayoutAlign="center center">
+  <mat-progress-bar mode="buffer" [value] = "progress"></mat-progress-bar>
+  <h1> {{progress}} %</h1>
+  <p>Keep on grinding!</p>
+  <button mat-raised-button color="accent" (click)="stop()">Stop</button>
+</section>
