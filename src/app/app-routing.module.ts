@@ -5,18 +5,23 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
 import { TrainingComponent } from './training/training.component';
+import { AuthGuard } from './auth/auth.guard';
 
-
+// Adding canActivate to the route will execute the canActivate method present in the passed component, in our case, it is AuthGuard
 const routes: Routes = [
     { path: '', component : WelcomeComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'login', component : LoginComponent },
-    { path: 'training', component : TrainingComponent }
+    { path: 'training', component : TrainingComponent, canActivate: [AuthGuard]},
+    { path: 'logout', component : LoginComponent }
 
 ];
 
+// This is a rare case which happens only in routing, we are adding providers in the module other than App Module. This is just becoz,
+// of the reason that, this service won't be used any where else other than routing module.
 @NgModule({
 imports: [RouterModule.forRoot(routes)],
-exports: [RouterModule]
+exports: [RouterModule],
+providers: [AuthGuard]
 })
 export class AppRoutingModule {}
